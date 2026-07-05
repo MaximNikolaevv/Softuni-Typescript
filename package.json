@@ -1,0 +1,15 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "run": "tsx",
+    "dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^5.x.x",
+    "@types/node": "^22.x.x",
+    "tsx": "^4.x.x"
+  }
+}
