@@ -1,15 +1,9 @@
 {
-  "name": "my-project",
-  "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "build": "tsc",
-    "run": "tsx",
-    "dev": "tsc --watch"
+    "start": "node out/task-1.js"
   },
   "devDependencies": {
-    "typescript": "^5.x.x",
-    "@types/node": "^22.x.x",
-    "tsx": "^4.x.x"
+    "ts-node": "^10.9.2"
   }
 }
