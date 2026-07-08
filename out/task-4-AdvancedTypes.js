@@ -1,16 +1,25 @@
 "use strict";
-function Operator(param, operation, operand) {
+function operator(param, operation, operand) {
     let result = 0;
-    ((operation === 'Index' && (typeof param === 'string' || Array.isArray(param))) ? result = param[operand] : null);
-    (operation === 'Length' && (typeof param === 'string' || Array.isArray(param)) ? result = param.length : null);
-    if (operation === 'Add' && (typeof param === 'string' || typeof param === 'number')) {
-        const result = typeof param === 'string' || typeof param === 'number'
-            ? param + operand
-            : NaN;
-        console.log(result);
-        return;
+    switch (operation) {
+        case 'Index':
+            if (typeof param === 'string' || Array.isArray(param)) {
+                result = param[operand];
+            }
+            break;
+        case 'Length':
+            if (typeof param === 'string' || Array.isArray(param)) {
+                result = param.length;
+            }
+            break;
+        case 'Add':
+            if (typeof param === 'string' || typeof param === 'number') {
+                const numericParam = typeof param === 'string' ? parseInt(param, 10) : param;
+                result = numericParam + operand;
+            }
+            break;
     }
     console.log(result);
 }
-Operator(['First', 'Second', 'Third'], 'Index', 1);
+operator(['First', 'Second', 'Third'], 'Index', 1); // "Second"
 //# sourceMappingURL=task-4-AdvancedTypes.js.map

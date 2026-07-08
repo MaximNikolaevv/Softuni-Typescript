@@ -1,28 +1,36 @@
-function Operator(param: string | number | string[], operation: 'Index' | 'Length' | 'Add', operand?: number) {
+function operator(
+    param: string | number | string[],
+    operation: 'Index' | 'Length' | 'Add',
+    operand?: number
+): void {
 
     let result: string | number = 0;
 
+    switch (operation) {
+        case 'Index':
+            if (typeof param === 'string' || Array.isArray(param)) {
+                result = param[operand as number];
+            }
+            break;
 
+        case 'Length':
+            if (typeof param === 'string' || Array.isArray(param)) {
+                result = param.length;
+            }
+            break;
 
-    ((operation === 'Index' && (typeof param === 'string' || Array.isArray(param))) ? result = param[operand as number] : null);
-
-
-
-    (operation === 'Length' && (typeof param === 'string' || Array.isArray(param)) ? result = param.length : null);
-
-
-
-    if (operation === 'Add' && (typeof param === 'string' || typeof param === 'number')) {
-        const result = typeof param === 'string' || typeof param === 'number'
-            ? (param as number) + (operand as number)
-            : NaN;
-        console.log(result);
-        return;
+        case 'Add':
+            if (typeof param === 'string' || typeof param === 'number') {
+                const numericParam = typeof param === 'string' ? parseInt(param, 10) : param;
+                result = numericParam + (operand as number);
+            }
+            break;
     }
 
     console.log(result);
-
 }
 
+operator(['First', 'Second', 'Third'], 'Index', 1); // "Second"
 
-Operator(['First', 'Second', 'Third'], 'Index', 1)
+
+
