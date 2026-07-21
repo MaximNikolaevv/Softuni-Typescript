@@ -1,8 +1,8 @@
 "use strict";
 class Employee {
-    name;
-    position;
-    salary;
+    name; // public property
+    position; // protected property
+    salary; // private property 
     constructor(name, position, salary) {
         this.name = name;
         this.position = position;
@@ -19,6 +19,6 @@ const emp = new Employee("Alice", "Manager", 5000);
 console.log(emp.getDetails());
 console.log(emp.showSalary());
 console.log(emp.name);
-console.log(emp.salary);
-console.log(emp.position);
+//console.log(emp.salary)
+//console.log(emp.position)
 //# sourceMappingURL=task6-OOP.js.map

@@ -1,7 +1,7 @@
 class Employee {
-    public name: string
-    protected position: string
-    private salary: number;
+    public name: string // public property
+    protected position: string // protected property
+    private salary: number; // private property 
 
     constructor(name: string, position: string, salary: number) {
         this.name = name;
@@ -28,6 +28,6 @@ console.log(emp.showSalary());
 
 console.log(emp.name)
 
-console.log(emp.salary)
+//console.log(emp.salary)
 
-console.log(emp.position)
+//console.log(emp.position)
