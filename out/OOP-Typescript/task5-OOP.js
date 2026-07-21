@@ -1,27 +1,21 @@
+"use strict";
 class Message {
-
-    send(): string {
+    send() {
         return "Sending message...";
     }
 }
-
 class EmailMessage extends Message {
-    override send(): string {
+    send() {
         return "Sending email...";
     }
 }
-
 class SMSMessage extends Message {
-    override send(): string {
+    send() {
         return "Sending SMS...";
     }
 }
-
-
-const messages: Message[] = [new Message(), new EmailMessage(), new SMSMessage()];
-
+const messages = [new Message(), new EmailMessage(), new SMSMessage()];
 messages.forEach((msg) => {
-
     console.log(msg.send());
-
-})
+});
+//# sourceMappingURL=task5-OOP.js.map
