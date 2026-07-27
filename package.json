@@ -4,7 +4,7 @@
     "start": "node out/task-1.js"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "type": "module"
   }
 }
-

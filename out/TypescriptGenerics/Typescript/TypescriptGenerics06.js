@@ -1,38 +1,15 @@
+"use strict";
 // =======================================================
 // 6) EXTENDS КАТО CONSTRAINT
 // =======================================================
-
-
-interface Entity {
-
-    id: number;
-
-}
-
-
-
-function getId<T extends Entity>(item: T): number {
-
-
+function getId(item) {
     return item.id;
-
-
 }
-
-
-
 const user = {
-
     id: 1,
     username: "Max"
-
 };
-
-
-
 getId(user);
-
-
 // Как работи:
 //
 // T =
@@ -53,17 +30,10 @@ getId(user);
 // Да.
 //
 // Работи.
-
-
-
 const product = {
-
     title: "Laptop",
     price: 2500
-
 };
-
-
 // getId(product);
 //
 // НЕ работи.
@@ -75,3 +45,4 @@ const product = {
 // id:number
 //
 // T не изпълнява Entity.
+//# sourceMappingURL=TypescriptGenerics06.js.map

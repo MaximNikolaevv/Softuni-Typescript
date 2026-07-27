@@ -1,39 +1,16 @@
-
+"use strict";
 // =======================================================
 // 10) KEYOF + GENERICS
 // =======================================================
-
-
-
 const myCar = {
-
     brand: "BMW",
     model: "M3",
     year: 2024
-
 };
-
-
-
-function getProperty<T, K extends keyof T>(
-
-    obj: T,
-
-    key: K
-
-) {
-
-
+function getProperty(obj, key) {
     return obj[key];
-
-
 }
-
-
-
 const brand = getProperty(myCar, "brand");
-
-
 // Как мисли TypeScript:
 //
 // T = {
@@ -61,20 +38,12 @@ const brand = getProperty(myCar, "brand");
 // тип:
 //
 // string
-
-
-
 const year = getProperty(car, "year");
-
-
 // K = "year"
 //
 // Връща:
 //
 // number
-
-
-
 // getProperty(car,"engine")
 //
 // НЕ работи
@@ -86,14 +55,9 @@ const year = getProperty(car, "year");
 // не съществува в:
 //
 // keyof T
-
-
-
 // =======================================================
 // ОБОБЩЕНИЕ
 // =======================================================
-
-
 // Generic:
 //
 // <T>
@@ -101,8 +65,6 @@ const year = getProperty(car, "year");
 // означава:
 //
 // "Не знам типа още"
-
-
 //
 // Когато използваме:
 //
@@ -113,39 +75,25 @@ const year = getProperty(car, "year");
 // T = User
 //
 // и заменя всички T с User
-
-
-
 // extends:
 //
 // Ограничение:
 //
 // T трябва да има определени свойства
-
-
-
 // implements:
 //
 // Класът обещава:
 //
 // "Ще спазвам този интерфейс"
-
-
-
 // keyof:
 //
 // Дава всички ключове на даден тип
-
-
-
 // Multiple Generics:
 //
 // <T,K>
 //
 // позволяват повече от един неизвестен тип
-
-
-
 // Type inference:
 //
 // TypeScript сам открива T без да го пишем
+//# sourceMappingURL=TypescriptGenerics10.js.map

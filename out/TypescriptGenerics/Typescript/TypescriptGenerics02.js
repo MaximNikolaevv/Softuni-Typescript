@@ -1,35 +1,14 @@
+"use strict";
 // =======================================================
 // 2) T И ЗАМЕСТВАНЕ НА ТИПОВЕ
 // =======================================================
-
-
-interface User {
-    id: number;
-    username: string;
-}
-
-
-interface Box<T> {
-
-    value: T;
-
-}
-
-
 // Използване:
-
-const userBox: Box<User> = {
-
+const userBox = {
     value: {
-
         id: 1,
         username: "Max"
-
     }
-
 };
-
-
 // Какво прави TypeScript:
 //
 // Box<User>
@@ -45,8 +24,6 @@ const userBox: Box<User> = {
 //     value: User;
 //
 // }
-
-
 // Следователно:
 //
 // userBox.value
@@ -57,5 +34,4 @@ const userBox: Box<User> = {
 //    id:number;
 //    username:string;
 // }
-
-
+//# sourceMappingURL=TypescriptGenerics02.js.map
