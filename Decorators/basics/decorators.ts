@@ -22,7 +22,7 @@ class CoolPerson {
 
 }
 
-const personn = new CoolPerson("Max"); // 
+const personn = new CoolPerson("Max"); 
 
 console.log(personn);
 
