@@ -25,7 +25,7 @@ CoolPerson = __decorate([
     AddAge,
     __metadata("design:paramtypes", [String])
 ], CoolPerson);
-const personn = new CoolPerson("Max"); // 
+const personn = new CoolPerson("Max");
 console.log(personn);
 //new (...args:any[]): {} // "Искам нещо, което може да се създава с new."
 // Например:
