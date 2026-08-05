@@ -24,12 +24,7 @@ const knight = new Knight(
 );
 
 
-const wizard = new Wizard(
-    3,
-    "Merlin",
-    12,
-    30
-);
+
 
 
 // =====================
